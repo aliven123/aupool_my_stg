@@ -1,0 +1,60 @@
+//公共的变量，组件中的less可以通过@import引入使用这些变量和函数
+@green:#57993d;
+@hvgreen:#7bd25f;
+@blue:#3d5b99;
+@hvblue:#67b8f2;
+@red:#993d3d;
+@hvred:#e46a5e;
+@gray:#333333;
+@hvgray:#3d5b99;
+@yellow:#eb9506;
+@submenugray:#4e4e4e;
+@hvsubmenublue:#338af9;
+@bdbg:#121416;
+@border1color:#626262;
+@border1:3px solid @border1color;
+@ctnbrc:#646464;
+@contentbr:3px solid @ctnbrc;
+@thin_br:1px solid @border1color;
+
+.box_flex(@flow:row wrap,@content:center,@cross_style:flex-start){
+    display: -webkit-flex;
+    display: flex;
+    flex-flow:@flow;
+//  主轴的对齐方式
+    justify-content:@content;
+//  交叉轴上的对齐方式
+    align-items: @cross_style;
+}
+.reset_ipt(@height:25px,@padding:4px 6px 4px 6px,@bg:@gray,@hvbg:white,@color:white,@hv:white){
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border: @thin_br;
+    outline: none;
+    height:@height;
+    padding:@padding;
+    border-radius: 1px;
+    background:@bg;
+    color: @color;
+    &:hover{
+        border:1px solid @hv;
+        box-shadow: 0 0 1px @hv;
+    }
+}
+.btn(@height:25px,@color:white,@bg:@blue,@hvbg:@hvblue){
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	border: none;
+	outline: none;
+	height:@height;
+	padding:4px 6px 4px 6px;
+	border-radius: 1px;
+	background:@bg;
+	color: @color;
+	cursor: pointer;
+	&:hover{
+	    background:@hvbg;
+	}
+}

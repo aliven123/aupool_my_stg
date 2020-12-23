@@ -1,0 +1,47 @@
+@import '../assets/css/common.css';
+@import '../assets/css/common.less';
+body{
+  width:100%;
+}
+#au_pool_my_stg{
+  p{
+    padding:10px;
+    border-bottom:@thin_br;
+  }
+  .au_ctn{
+    padding:2px;
+    .au_thead,.au_tbody{
+        width:100%;
+        text-align: left;
+        table-layout: fixed;
+        border-collapse:collapse;
+      }
+      .au_thead{
+        border:@thin_br;
+        background:@gray;
+        color:white;
+      }
+      .au_tbody{
+        border-top:none;
+        tr{
+          border-bottom:@thin_br;
+          &:hover{
+            background:@gray;
+            color:white;
+          }
+          td{
+            word-break:break-all;
+          }
+        }
+        tr:last-child{
+          border:none;
+        }
+      }
+  }
+  .au_tbody_ctn{
+    border:@thin_br;
+    height:450px;
+    overflow: auto;
+  }
+  
+}
